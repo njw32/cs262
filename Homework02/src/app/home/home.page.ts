@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import { NativeStorage} from '@ionic-native/native-storage/ngx';
+import {NavController} from 'ionic-angular';
+import {Storage} from '@ionic/storage'
+=======
+
 
 @Component({
   selector: 'app-home',
@@ -8,17 +11,23 @@ import { NativeStorage} from '@ionic-native/native-storage/ngx';
 })
 export class HomePage {
 
-  constructor(private nativeStorage: NativeStorage) {
-    this.nativeStorage.setItem('test', {property: 'value', anotherProperty: 'anotherValue'})
-        .then(
-          (data) => console.log('Stored first item!', data),
-          error => console.error('Error storing item', error))
-    this.nativeStorage.getItem('test')
-          .then(
-            data => console.log(data),
-            error => console.error(error)
-          );
-}
-}
+  inputtext:string;
+  key:string = 'username';
 
+  constructor(public navCtr: NavController, 
+    private storage: Storage){
+
+    }
+
+
+    saveData(){
+      this.storage.set(this.key, this.inputtext);
+    }
+      
+    loadData(){  
+      this.storage.get(this.key).then((val)=> {
+        console.log('Your username is', val);
+      });
+    }
+}
 
