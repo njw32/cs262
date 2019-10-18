@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NativeStorage} from '@ionic-native/native-storage/ngx';
 
 @Component({
   selector: 'app-home',
@@ -8,5 +9,6 @@ import { Component } from '@angular/core';
 export class HomePage {
 
   constructor() {}
-
+  private nativeStorage: NativeStorage
 }
+
