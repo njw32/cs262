@@ -1,0 +1,20 @@
+njw32@gold10:~$ psql
+psql (10.10 (Ubuntu 10.10-0ubuntu0.18.04.1))
+Type "help" for help.
+
+njw32=> SELECT COUNT( *) FROM Property;
+ count 
+-------
+     4
+(1 row)
+
+njw32=> SELECT * FROM Property;
+      name       
+-----------------
+ Illinois Avenue
+ Michigan Avenue
+ St. James Place
+ Park Place
+(4 rows)
+
+njw32=> 

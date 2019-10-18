@@ -31,6 +31,7 @@
     "ionic-angular": "^3.9.9",
     "rxjs": "~6.5.1",
     "rxjs-compat": "^6.5.3",
+
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"
   },
@@ -43,6 +44,7 @@
     "@angular/compiler": "~8.1.2",
     "@angular/compiler-cli": "~8.1.2",
     "@angular/language-service": "~8.1.2",
+
     "@ionic/angular-toolkit": "~2.0.0",
     "@types/jasmine": "~3.3.8",
     "@types/jasminewd2": "~2.0.3",
@@ -70,6 +72,7 @@
   "cordova": {
     "plugins": {
       "cordova-sqlite-storage": {},
+
       "cordova-plugin-whitelist": {},
       "cordova-plugin-statusbar": {},
       "cordova-plugin-device": {},

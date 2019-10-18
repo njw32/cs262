@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import {NavController} from 'ionic-angular';
 import {Storage} from '@ionic/storage'
+=======
+
 
 @Component({
   selector: 'app-home',
@@ -28,3 +30,4 @@ export class HomePage {
       });
     }
 }
+
