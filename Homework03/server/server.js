@@ -30,7 +30,7 @@ var config 			= require('./config'),
 	path 			= require('path'),
 
     /* Define Mongoose connection to project's MongoDB database */
-	connection 		= mongoose.connect(config.database, { useMongoClient: true }),
+	connection 		= mongoose.connect(config.database),
 
     /* Import Schema for managing MongoDB database communication
        with Mongoose */
