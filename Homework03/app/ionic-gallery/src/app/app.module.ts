@@ -12,7 +12,7 @@ import { HomePage} from '../app/home/home.page';
 import { ImageService } from './image.service'
 
 @NgModule({
-  declarations: [AppComponent,],
+  declarations: [AppComponent],
   entryComponents: [HomePage],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule],
   providers: [
