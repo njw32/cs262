@@ -29,7 +29,7 @@ export class HomePage {
                                 node application is running on
     */
    private _HOST : string 			=	"http://ENTER-YOUR-NETWORK-IP-ADDRESS-HERE:8080/";
-
+  
 
 
    constructor(public navCtrl 		: NavController,
@@ -81,7 +81,7 @@ export class HomePage {
       {
          // If the request was successful notify the user
          this.retrieve();
-         this.displayNotification(data.records.name + ' was successfully deleted');
+         //this.displayNotification(data.records.name + ' was successfully deleted');
       },
       (error : any) =>
       {
@@ -127,10 +127,10 @@ export class HomePage {
     *                              from MongoDB
     * @return {None}
     */
-   updateRecord(item : any) : void
-   {
-      this.navCtrl.push('manage-gallery', { record : item });
-   }
+  //  updateRecord(item : any) : void
+  //  {
+  //     this.navCtrl.push('manage-gallery', { record : item });
+  //  }
 
 
 
@@ -141,11 +141,11 @@ export class HomePage {
     * @public
     * @method addRecord
     * @return {None}
-    */
-   addRecord() : void
-   {
-      this.navCtrl.push('manage-gallery');
-   }
+  //   */
+  //  addRecord() : void
+  //  {
+  //     this.navCtrl.push('manage-gallery');
+  //  }
 
 
 
@@ -160,11 +160,11 @@ export class HomePage {
     *                              from MongoDB
     * @return {None}
     */
-   viewRecord(item : any): any
-   {
-      let modal = this._MODAL.create('view-gallery', { record : item });
-      modal.present();
-   }
+  //  viewRecord(item : any): any
+  //  {
+  //     let modal = this._MODAL.create('view-gallery', { record : item });
+  //     modal.present();
+  //  }
 
 
 
@@ -176,13 +176,13 @@ export class HomePage {
     * @param item    {String}      The message to be displayed
     * @return {None}
     */
-   displayNotification(message : string) : void
-   {
-      let toast = this._TOAST.create({
-         message 	: message,
-         duration 	: 3000
-      });
-      toast.present();
-   }
+//    displayNotification(message : string) : void
+//    {
+//       let toast = this._TOAST.create({
+//          message 	: message,
+//          duration 	: 3000
+//       });
+//       toast.present();
+//    }
 
-}
+    };
