@@ -1,0 +1,3 @@
+For lab 11 KVL told us we could do our linting on the main project. I created an issue there and linted one of our typescript files.
+Mostly changed spacing and parentheses lint issues. Decided to keep our variable names consistent because we prefered to have them that way
+despite the lint complaints. 

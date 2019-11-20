@@ -1,0 +1,2 @@
+1) The service is RESTful. Its uses Http operations such as Get, Post, Create, Put, and Delete.
+2) Not sure if this question applies to the non-SQL, MongoDB database we have created for hw3.
