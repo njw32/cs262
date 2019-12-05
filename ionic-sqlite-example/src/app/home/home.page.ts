@@ -10,24 +10,49 @@ export class HomePage {
 
   private database: SQLiteObject;
 
-  constructor(private sqlite: SQLite) {
+  constructor(public sqlite: SQLite){
+    console.log('Constructor')
     this.sqlite.create({
-      name:'items.db',
-      location: 'default'   
+      name: 'ex.db',
+      location: 'default'
      })
-     .then((db:SQLiteObject) => {
-       this.database = db;
-       db.executeSql( 
-          `CREATE TABLE IF NOT EXISTS items (
-            reference CHAR(10) PRIMARY KEY,
-            name CHAR(30),
-            qMin FLOAT,
-            qReal FLOAT
-          ))`, [])
-        .then(() => console.log('Executed SQL'))
-        .catch(e => console.log(e));
-     })
-     .catch(e => console.log(e));
-  }   
+     console.log('Constructor Complete');
+//.then(
+//       (db : SQLiteObject) => {
+//         console.log('database created')
+//        // console.log(JSON.stringify(db))
+//         this.addHero(db).then(
+//           (res) => {
+//             console.log('hero added')
+//             console.log(res)
+//             this.printAllHeros(db)
+//           }
+//         )
+//       }
+//     )
 
-}
+     }
+  
+//   addHero(dbObj: SQLiteObject){
+//     let q = "INSERT INTO heros (name) VALUES(?)"
+//     return dbObj.executeSql(q, ['Iron Man']).then(
+//       (res) => {
+//         return res
+//     }
+//     )
+//   }
+//   printAllHeros(dbObj: SQLiteObject){
+//     let q = "SELECT name FROM heros"
+//     dbObj.executeSql(q,[]).then (
+//       (res) =>{
+//         for(let i =0; i< res.rows.length; i++){
+//           console.log(res.rows.item(i))
+//         }
+//       }
+//     )
+
+//   }
+ }
+//open db, create db
+//add to db
+//read db
